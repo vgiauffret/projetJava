@@ -1,0 +1,128 @@
+package com.jeudecarte.java;
+
+import java.awt.EventQueue;
+import java.util.ArrayList;
+import java.util.Arrays;
+import javax.swing.JFrame;
+import javax.swing.JButton;
+import java.awt.BorderLayout;
+import java.awt.GridLayout;
+import javax.swing.SwingConstants;
+import java.awt.FlowLayout;
+
+
+
+public class Main {
+	
+	public static JFrame fenetre;
+	public static Scene scene;
+	public static void main(String[] args) {
+		
+		fenetre = new JFrame("Jeu de Carte");
+		scene = new Scene();
+		
+		fenetre.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		fenetre.setSize(615, 635);
+		fenetre.setLocationRelativeTo(null);
+		fenetre.setResizable(false);
+		fenetre.setAlwaysOnTop(true);
+		fenetre.setContentPane(scene);
+		
+		
+		
+		//Carte Nord
+		Carte cartenord1 = new Carte("/DameCarreau.gif", "/Back.gif");
+		scene.setLayout(null);
+		CarteButton btncartenord1 = new CarteButton(cartenord1);
+		btncartenord1.setBounds(200, 15, 73, 97);
+		fenetre.getContentPane().add(btncartenord1);
+		Carte cartenord2 = new Carte("/AsCarreau.gif", "/Back.gif");
+		scene.setLayout(null);
+		CarteButton btncartenord2 = new CarteButton(cartenord2);
+		btncartenord2.setBounds(250, 15, 73, 97);
+		fenetre.getContentPane().add(btncartenord2);
+		Carte cartenord3 = new Carte("/DameCoeur.gif", "/Back.gif");
+		scene.setLayout(null);
+		CarteButton btncartenord3 = new CarteButton(cartenord3);
+		btncartenord3.setBounds(300, 15, 73, 97);
+		fenetre.getContentPane().add(btncartenord3);
+		Carte cartenord4 = new Carte("/RoiPique.gif", "/Back.gif");
+		scene.setLayout(null);
+		CarteButton btncartenord4 = new CarteButton(cartenord4);
+		btncartenord4.setBounds(350, 15, 73, 97);
+		fenetre.getContentPane().add(btncartenord4);
+		
+		//Carte Ouest
+		Carte carteouest1 = new Carte("/DixPique.gif", "/Back-90.gif");
+		scene.setLayout(null);
+		CarteButton btncarteouest1 = new CarteButton(carteouest1);
+		btncarteouest1.setBounds(15, 200, 97, 73);
+		fenetre.getContentPane().add(btncarteouest1);
+		Carte carteouest2 = new Carte("/RoiCoeur.gif", "/Back-90.gif");
+		scene.setLayout(null);
+		CarteButton btncarteouest2 = new CarteButton(carteouest2);
+		btncarteouest2.setBounds(15, 250, 97, 73);
+		fenetre.getContentPane().add(btncarteouest2);
+		Carte carteouest3 = new Carte("/HuitPique.gif", "/Back-90.gif");
+		scene.setLayout(null);
+		CarteButton btncarteouest3 = new CarteButton(carteouest3);
+		btncarteouest3.setBounds(15, 300, 97, 73);
+		fenetre.getContentPane().add(btncarteouest3);
+		Carte carteouest4 = new Carte("/DameTrefle.gif", "/Back-90.gif");
+		scene.setLayout(null);
+		CarteButton btncarteouest4 = new CarteButton(carteouest4);
+		btncarteouest4.setBounds(15, 350, 97, 73);
+		fenetre.getContentPane().add(btncarteouest4);
+		
+		//Carte Est*********************************************************
+		Carte carteest1 = new Carte("/NeufCarreau.gif", "/Back-90.gif");
+		scene.setLayout(null);
+		CarteButton btncarteest1 = new CarteButton(carteest1);
+		btncarteest1.setBounds(500, 250, 97, 73);
+		fenetre.getContentPane().add(btncarteest1);
+		Carte carteest2 = new Carte("/HuitTrefle.gif", "/Back-90.gif");
+		scene.setLayout(null);
+		CarteButton btncarteest2 = new CarteButton(carteest2);
+		btncarteest2.setBounds(500, 280, 97, 73);
+		fenetre.getContentPane().add(btncarteest2);
+		Carte carteest3 = new Carte("/DameCoeur.gif", "/Back-90.gif");
+		scene.setLayout(null);
+		CarteButton btncarteest3 = new CarteButton(carteest3);
+		btncarteest3.setBounds(500, 310, 97, 73);
+		fenetre.getContentPane().add(btncarteest3);
+		Carte carteest4 = new Carte("/AsPique.gif", "/Back-90.gif");
+		scene.setLayout(null);
+		CarteButton btncarteest4 = new CarteButton(carteest4);
+		btncarteest4.setBounds(500, 340, 97, 73);
+		fenetre.getContentPane().add(btncarteest4);
+		
+		//CarteSUD*************************************************************
+		MesCarte cartesud1 = new MesCarte("/RoiPique.gif");
+		scene.setLayout(null);
+		MaCarteButton btncartesud1 = new MaCarteButton(cartesud1);
+		btncartesud1.setBounds(250, 500, 73, 97);
+		fenetre.getContentPane().add(btncartesud1);
+		MesCarte cartesud2 = new MesCarte("/RoiCarreau.gif");
+		scene.setLayout(null);
+		MaCarteButton btncartesud2 = new MaCarteButton(cartesud2);
+		btncartesud2.setBounds(280, 500, 73, 97);
+		fenetre.getContentPane().add(btncartesud2);
+		MesCarte cartesud3 = new MesCarte("/DixCarreau.gif");
+		scene.setLayout(null);
+		MaCarteButton btncartesud3 = new MaCarteButton(cartesud3);
+		btncartesud3.setBounds(310, 500, 73, 97);
+		fenetre.getContentPane().add(btncartesud3);
+		MesCarte cartesud4 = new MesCarte("/DamePique.gif");
+		scene.setLayout(null);
+		MaCarteButton btncartesud4 = new MaCarteButton(cartesud4);
+		btncartesud4.setBounds(340, 500, 73, 97);
+		fenetre.getContentPane().add(btncartesud4);
+		
+		
+		fenetre.setVisible(true);
+		
+		
+	}
+}
+	
+

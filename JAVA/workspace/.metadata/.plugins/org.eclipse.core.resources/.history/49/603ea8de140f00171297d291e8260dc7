@@ -1,0 +1,14 @@
+/*package com.jeudecarte.java;
+
+import javax.swing.ImageIcon;
+
+public class MesCarte {
+	
+	public ImageIcon imageFace;
+	public ImageIcon imageDos;
+
+	public MesCarte(String face){
+		this.imageFace = new ImageIcon( getClass().getResource( face));
+	}
+
+}*/
